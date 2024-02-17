@@ -1,16 +1,19 @@
 from src.views.http_types.http_request import HttpRequest
 from src.views.http_types.http_response import HttpResponse
+from src.controllers.tag_creator_controller import TagCreatorController
 
 class TagCreatorView:
-    '''
-        Responsability for interacting with HTTP
-    '''
-    def validate_and_create(self, http_request: HttpRequest):
-        #body = http_request.body
-        #product_code = body["product_code"]
+  '''
+      Responsability for interacting with HTTP
+  '''
+  def validate_and_create(self, http_request: HttpRequest):
+    tag_creator_controller = TagCreatorController()
 
-        #lógica de regra de negocio
-        print('Estou na minha view')
-        print(http_request)
-        #retorno http
-        return HttpResponse(status_code=200, body={  "hello": "world" })
+    body = http_request.body
+    product_code = body["product_code"]
+
+    #lógica de regra de negocio
+    formatted_response = tag_creator_controller.create(product_code)
+
+    #retorno http
+    return HttpResponse(status_code = 201, body = formatted_response)
