@@ -4,9 +4,8 @@
 
 This project uses:
 
--Python 3.10.12
--Flask 3.0.2
--
+- Python 3.10.12
+- Flask 3.0.2
 
 ## How to run
 
