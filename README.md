@@ -15,6 +15,12 @@ First, we need to create a virtual enviroment (.venv/):
   python3 -m venv .venv
 ```
 
+Then we need to activate the virtual enviroment:
+
+```bash
+  . .venv/bin/activate
+```
+
 Also we need to install all dependencies listed in <requirements.txt>:
 
 ```bash
@@ -24,7 +30,7 @@ Also we need to install all dependencies listed in <requirements.txt>:
 To initialize the server, after configuration we only need to execute:
 
 ```bash
-  pithon3 run.py
+  python3 run.py
 ```
 
 ### Where are my generated barcodes?
